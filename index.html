@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+<link rel="icon" href="logo.jpg" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+        body{
+            margin: 50px;
+            padding: 50px;
+            background-color: #33ccff;
+        }
+        #container{
+            background-color: #fff;
+            margin-top: 10px;
+            border-radius:25px 25px 0 0;
+            padding: 20px;
+        }
+        #topsection{
+            margin-top: 60px;
+        }
+        #topsectionh1{
+            font-size: 50px;
+        }
+        #text{
+            box-shadow: 10px 9px 60px rgba(86, 85, 85, 0.368) ;
+            height: 50px;
+            border-style: none;
+            border-radius: 0px;
+        }
+        .blue-line{
+            margin: 100px 50px 20px 0%;
+            width: 50px;
+            height: 3px;
+            background-color: #33ccff;
+            margin-left: -30px;
+        }
+        .cta {
+            background-color:aliceblue;
+            margin: 90px 90px 50px 50px;
+            padding: 40px 20px 15px 10px;
+        }
+        .cta img {
+            border-radius: 50%;
+            width: 150px;
+            margin-top: -50px;
+        }
+        .card{
+            box-shadow: 10px 9px 60px rgba(86, 85, 85, 0.368);
+        }
+        #jumbotron {
+            background-color:#f8f9fa;
+            margin: 100px 60px 90px;
+            padding: 30px 20px 10px 5px;
+        }
+        #light{
+            width: 170px;
+            height: 60px;
+            margin-right: 100px;
+            margin-top: 70px;
+        }
+        #footer{
+            background-color: rgba(30, 26, 26, 0.727);
+            border-radius: 0 0 0 0;
+            height: 6%;
+            max-width: 1140px;
+            margin: 0px 5px 0px 5px;
+            padding-top: 900px;
+            padding-left: 7%;
+        }
+        #foot2{
+            padding-top: 25px;
+            padding-bottom: 10px;
+        }
+        #footer-end{
+            text-align: center;
+            max-width: 1150px;
+            border-radius: 0 0 20px 20px;
+            color: rgb(129, 153, 179);
+            background-color: rgba(30, 26, 26, 0.813);
+            height: 50px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 13px;
+        }
+        .btn-primary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .btn-icon-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-icon-left i {
+            order: -1;
+            margin-right: 10px; /* Add space between icon and text */
+        }
+        .card{
+            border-radius: 20px;
+        }
+        #browse{
+            margin-top: -80px;
+            margin-right: 30px;
+        }
+        #btn-light{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!--nav container starts here-->
+    <div class="container" id="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sn-12">
+                    <div class="navbar navbar-expand-sm">
+                        <div class="container">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="#">
+                                    <img src="logo.jpg" width="50px">
+                                </a>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Library</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Subjects</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Paths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calculator.html">Calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.html">News</a>
+                            </li>
+                          </ul>
+                          <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary" style="margin-left: 15px;"> Join Pro </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="topsection">
+            <div class="row">
+                <div class="col-sn-12 text-center mt-4">
+                    <h1 id="topsectionh1"><strong>Ready to build <br>something awesome?</strong></h1>
+                    <br/>
+                    <p style="color:cadetblue;">We create practical screencasts for awesome developers.</p><br/>
+                    <br/>
+                    <input type="text" class="form-control form-control-lg"  id="text"  placeholder="! Search our Library.e.g. learn Vue"><br />
+                </div>
+            </div>
+        </div>
+        <div class="blue-line"></div>
+        <div class="row mt-4">
+            <div class="col-sn-12">
+                <h2 style="margin-left: 50px;">Practical projects to get you ahead.</h2>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p style="color: cadetblue; margin-left: 50px;">Rather than just teach theory, we focus on
+                        real code to inspire your next project.<br />
+                        Learning shouldn't be boring, so let's have some fun.
+                    </p>
+                    <button class="btn btn-primary btn-icon-left" id="browse">
+                            <i class="bi bi-search "></i>    Browse Library
+                     </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                        <img src="picture.jpg" alt="AYOKANMI ADEJOLA" class="img">
+                    </div>
+                    <br />
+                    <div class="col-md-9">
+                        <p style="color: cadetblue;">My career Started as a designer,
+                             out of necessity i needed to learn how to handle the entire stack. W3schools took me from 
+                             basically no knowledge of development to being able to handle every aspect of it, I highly recommend it to anyone looking to launch or accelerate their career.<br/><br>
+                             AYOKANMI ADEJOLA, LAGOS STATE, NIGERIA.
+                              </p><br />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+        <!-- Cards Section -->
+         <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="cta2">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <h2><strong>Latest Content</strong></h2>
+                        <p style="color: cadetblue;">Fresh from the Library</p>
+                        <br />
+                        <p style="color:dodgerblue;">
+                          Browse everything 
+                             <i class="bi bi-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="col-md-9">
+            <div class="row" id="roll">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">Super Fast Data Nesting</h5>
+                            <p class="card-text" style="color: cadetblue;">Nesting huge amounts of data like comments? Here's a unique technique combining API data and frontend logic to make it a breeze.</p><br/>
+                            <button type="button" class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br />
+                            <br/>
+                            <button class="btn btn-primary w-100" >
+                             Watch Now  <i class="bi bi-play-circle-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">API Request With Flutter</h5>
+                            <p class="card-text" style="color: cadetblue;">Get started making API requests in Flutter. we'll cover simple requests, working with models and extracting HTTP logic to a dedicated web service class.</p>
+                            <button type="button" class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br />
+                            <br/>
+                            <button class="btn btn-primary w-100">Watch Now  <i class="bi bi-play-circle-fill"></i>
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">Build A Simple E-commerce Platform</h5>
+                            <p class="card-text" style="color: cadetblue;">Nesting huge amounts of data like comments? Here's a unique technique combining API data and frontend logic to make it a breeze.</p><br />
+                            <button type="button" class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br /><br />
+                            <button class="btn btn-primary w-100">Watch Now  <i class="bi bi-play-circle-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div><!--card ends here-->
+        <div class="container mt-3">
+            <div class="mt-4 p-5 bg-primary text-white rounded" id="jumbotron">
+             <div class="d-flex justify-content-between align-items-center">
+              <h1>Unlimited access<br/>to everything with<br/>pro membership.</h1>
+              <button type="button" class="btn btn-light" id="light"> <strong style="color:royalblue;">See Plans</strong>  </button>
+              </div>
+              <br />
+              <p>for the price of a few coffees a month you get access<br/>to our entire Library of content, and more.</p> 
+            </div>
+          </div>
+          <!--featured content section-->
+          <div class="container">
+            <h2 class="mt-5"><strong>Featured Content</strong></h2><br/>
+            <br/>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">Super Fast Data Nesting</h5>
+                            <p class="card-text" style="color: cadetblue;">Nesting huge amounts of data like <br/>comments? Here's a unique technique<br/>combining API data and frontend logic to<br/>make it a breeze.</p><br/>
+                            <button type="button" class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br /> <br />
+                            <br/>
+                            <button class="btn btn-primary w-100" >
+                             Watch Now  <i class="bi bi-play-circle-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">E-commerce Platform</h5>
+                            <p class="card-text" style="color: cadetblue;">Nesting huge amounts of data like <br/>comments? Here's a unique technique<br/>combining API data and frontend logic to<br/>make it a breeze.</p><br/>
+                            <button type="button" class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br /> <br />
+                            <br/>
+                            <button class="btn btn-primary w-100">Watch Now  <i class="bi bi-play-circle-fill"></i>
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="color: deepskyblue;"><B>PRO ONLY</B></p>
+                            <h5 class="card-title">Practical Vue Components</h5>
+                            <p class="card-text" style="color: cadetblue;">Build a collection of reuseable Components for your app, and learn the complexities of Vue along the way. Everything from buttons and modals to collapsible file trees and navigation. super clean/reuseable.</p>
+                            <button class="btn btn-light">Laravel</button>    <button type="button" class="btn btn-light">Vuex</button><br /> <br />
+                            <br/>
+                            <button class="btn btn-primary w-100">Watch Now  <i class="bi bi-play-circle-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <br/>
+            <section class="cta">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img src="picture2.jpg" alt="AYOKANMI ADEJOLA" class="img">
+                        </div>
+                        <br />
+                        <div class="col-md-9">
+                            <p style="color: cadetblue;"> I credit W3schools as the single most beneficial Learning resource to my development career. when i was Learning my first programming language, W3schools taught me how to develop some applications and introduced me to the fundamentals. Now i develop complex applications and i'm a senior developer with my company. You put in the effort, W3schools brings the knowledge! <br/>
+                                <br /> AYOKANMI ADEJOLA, LAGOS, NG (@mtownsend5512)
+                                  </p><br />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer starts here -->
+        <footer class="footer text-light py-0" id="footer" text-align="center">
+            <div class="container" id="foot2">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5>Library</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li><p style="color: cadetblue;">Latest & featured</p></li>
+                        <li><p style="color: cadetblue;">Library index</p></li>
+                        <li><p style="color: cadetblue;">Snippets</p></li>
+                        <li><p style="color: cadetblue;">Browse Subjects</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Account</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li><p style="color: cadetblue;">Sign in</p></li>
+                        <li><p style="color: cadetblue;">Create Account</p></li>
+                        <li><p style="color: cadetblue;">Go Pro</p></li>
+                        <li><p style="color: cadetblue;">Testimonials</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Social</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li><p style="color: cadetblue;">RSS feeds</p></li>
+                        <li><p style="color: cadetblue;">Twitter</p></li>
+                        <li><p style="color: cadetblue;">Facebook</p></li>
+                        <li><p style="color: cadetblue;">Youtube</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Company</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li><p style="color: cadetblue;">Get in touch</p></li>
+                        <li><p style="color: cadetblue;">Terms</p></li>
+                        <li><p style="color: cadetblue;">Privacy policy</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Codecourse Family</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li><p style="color: cadetblue;">Snippets</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </footer><!--footer ends here-->
+        <footer class="footer-end text-light py-3" id="footer-end">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <small style="color: cadetblue;">&copy; 2024 Codecourse Ltd. All Rights Reserved. Born in London, UK. Comnpany number 09041072.</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html> 

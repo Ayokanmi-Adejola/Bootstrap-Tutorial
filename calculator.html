@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href=logo.jpg" type="image/x-icon">
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+
+  <style>
+      :root {
+        --orange-050: #ffe8d9;
+        --orange-100: #ffd0b5;
+        --orange-200: #ffb088;
+        --orange-300: #ff9466;
+        --orange-400: #f9703e;
+        --orange-500: #f35627;
+        --orange-600: #de3a11;
+        --orange-700: #c52707;
+        --orange-800: #ad1d07;
+        --orange-200: #841003;
+      
+        --grey-050: #f5f7fa;
+        --grey-100: #e4e7eb;
+        --grey-200: #cbd2d9;
+        --grey-300: #9aa5b1;
+        --grey-400: #7b8794;
+        --grey-500: #616e7c;
+        --grey-600: #52606d;
+        --grey-700: #3e4c59;
+        --grey-800: #323f4b;
+        --grey-200: #1f2933;
+      }
+      
+      html {
+        font-size: 150%;
+        font-weight: 300;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        line-height: 1.4;
+      }
+      
+      body {
+        display: flex;
+        background-color: #33ccff;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+      }
+      
+      .calculator {
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .calculator__display {
+        background-color: var(--grey-200);
+        color: #fff;
+        width: 16.25rem;
+        height: 50px;
+        padding: 0.75rem 1rem;
+        text-align: right;
+        border-radius: 10px 10px 0 0;
+        font-size: calc(1rem * 1.2 * 1.2);
+      }
+      
+      .calculator__keys {
+        background: var(--grey-050);
+        color: var(--grey-900);
+        display: grid;
+        border-radius: 10 10px 10 10;
+        padding: 10px;
+        height: 310px;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, auto );
+        grid-template-areas:
+        
+          ". . . ."
+          "seven eight nine equal"
+          "four five six equal"
+          "one two three equal"
+          "decimal zero clear equal";
+      }
+      
+      .calculator__keys > button {
+        border: 0;
+      }
+      
+      .one {
+        grid-area: one;
+      }
+      .two {
+        grid-area: two;
+      }
+      .three {
+        grid-area: three;
+      }
+      .four {
+        grid-area: four;
+      }
+      .five {
+        grid-area: five;
+      }
+      .six {
+        grid-area: six;
+      }
+      .seven {
+        grid-area: seven;
+      }
+      .eight {
+        grid-area: eight;
+      }
+      .nine {
+        grid-area: nine;
+      }
+      .zero {
+        grid-area: zero;
+      }
+      .decimal {
+        grid-area: decimal;
+      }
+      .clear {
+        grid-area: clear;
+        color: #fff;
+        background-color: var(--grey-900);
+      }
+      
+      .clear:active {
+        background: var(--grey-900);
+      }
+      .equal {
+        grid-area: equal;
+        background-color: limegreen;
+        color: #fff;
+        border-radius: 10px;
+        font-size:xx-large;
+      }
+      
+      .equal:active {
+        background-color:darkgreen;
+      }
+      
+      .operator {
+        background: gray;
+        color: #fff;
+        border-radius: 5px;
+        font-size: x-large;
+      }
+      
+      .number {
+        background: lightgray;
+        border-radius: 5px;
+        font-size: x-large;
+      }
+      
+      .operator:active,
+      .number:active {
+        background: var(--grey-900);
+      }
+      .btn-primary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+ </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator__display" id="display">0</div>
+        <div class="calculator__keys">
+        <button class="operator plus" value="+">+</button>
+        <button class="operator minus" value="-">-</button>
+        <button class="operator times" value="*">&times;</button>
+        <button class="operator divide" value="/">÷</button>
+        <button class="number one" value="1">1</button>
+        <button class="number two" value="2">2</button>
+        <button class="number three" value="3">3</button>
+        <button class="number four" value="4">4</button>
+        <button class="number five" value="5">5</button>
+        <button class="number six" value="6">6</button>
+        <button class="number seven" value="7">7</button>
+        <button class="number eight" value="8">8</button>
+        <button class="number nine" value="9">9</button>
+        <button class="number zero" value="0">0</button>
+        <button class="number decimal" value=".">.</button>
+        <button class="number clear" style="background-color:red;" value="C">C</button>
+        <button class="equal" value="=">=</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+        let currentInput = '';
+        let operator = '';
+        let previousInput = '';
+
+        document.querySelectorAll('.number').forEach(button => {
+            button.addEventListener('click', () => {
+                if (button.value === 'C') {
+                    currentInput = '';
+                    operator = '';
+                    previousInput = '';
+                    display.textContent = '0';
+                } else {
+                    currentInput += button.value;
+                    display.textContent = currentInput;
+                }
+            });
+        });
+
+        document.querySelectorAll('.operator').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentInput === '') return;
+                if (previousInput !== '') {
+                    calculate();
+                }
+                operator = button.value;
+                previousInput = currentInput;
+                currentInput = '';
+            });
+        });
+
+        document.querySelector('.equal').addEventListener('click', () => {
+            if (currentInput === '' || previousInput === '') return;
+            calculate();
+            operator = '';
+        });
+
+        function calculate() {
+            let result;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+            if (isNaN(prev) || isNaN(current)) return;
+            switch (operator) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            currentInput = result;
+            previousInput = '';
+            display.textContent = result;
+        }
+    </script>
+</body>
+</html>
