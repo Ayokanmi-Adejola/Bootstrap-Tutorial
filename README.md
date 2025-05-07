@@ -1,7 +1,7 @@
 # Bootstrap Tutorial
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Last Commit](https://img.shields.io/github/last-commit/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/Ayokanmi-Adejola/Bootstrap-Tutorial)](https://github.com/Ayokanmi-Adejola/Bootstrap-Tutorial)
 
 This repository contains a comprehensive tutorial on Bootstrap, a popular CSS framework for building responsive and mobile-first websites.
 
